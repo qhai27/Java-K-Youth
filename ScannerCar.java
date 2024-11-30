@@ -22,7 +22,6 @@ public class ScannerCar {
 
         System.out.println("Enter details for " + carCount + " cars:");
 
-        // Loop to input car details and calculate total price
         for (int i = 1; i <= carCount; i++) {
             System.out.println("Car " + i + ":");
 
@@ -34,13 +33,12 @@ public class ScannerCar {
 
             System.out.print("Enter Price: ");
             double price = sc.nextDouble();
-            sc.nextLine(); // Clear the newline character from the buffer
+            sc.nextLine();
 
-            // Create a Car object and add its price to the total
+    
             Car car = new Car(model, make, price);
             totalPrice += car.price;
 
-            // Display the car details
             System.out.println("Model: " + car.model + ", Make: " + car.make + ", Price: " + car.price);
         }
 
